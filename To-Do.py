@@ -2,14 +2,14 @@ import biblioteca as bib
 
 tarefas = []
 
-bib.Mostrar_Menu()
-
 while(True):
     bib.Mostrar_Menu()
-    
+
     escolha = int(input(" Escolha: "))
     if(escolha == 1):
-        tarefas [0+1] = input("Adicione a Tarefa: ")
+        tarefas = input("Adicione a nova tarefa: ")
+        tarefas.append(tarefas)
+        print(tarefas)
     elif(escolha == 2):
         pass
     elif(escolha == 3):
