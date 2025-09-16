@@ -4,15 +4,16 @@ tarefas = []
 
 while(True):
     bib.Mostrar_Menu()
-
-    escolha = int(input(" Escolha: "))
-    if(escolha == 1):
-        tarefas = input("Adicione a nova tarefa: ")
-        tarefas.append(tarefas)
-        print(tarefas)
-    elif(escolha == 2):
-        pass
-    elif(escolha == 3):
-        pass
-    elif(escolha == 4):
-        break
+    
+    escolha = int(input("Escolha: "))
+    match(escolha):
+        case 1:
+            novas_tarefas = input("Adicione a nova tarefa: ")
+            tarefas.append(novas_tarefas)
+            print(tarefas)
+        case 2:
+            pass
+        case 3:
+            pass
+        case 4:
+            break
