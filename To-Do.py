@@ -12,8 +12,11 @@ while(True):
             tarefas.append(novas_tarefas)
             print(tarefas)
         case 2:
-            pass
+            editar_tarefa = novas_tarefas
+            print(f"Edite: {editar_tarefa}")
+
         case 3:
             pass
         case 4:
             break
+
