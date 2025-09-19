@@ -10,13 +10,30 @@ while(True):
         case 1:
             novas_tarefas = input("Adicione a nova tarefa: ")
             tarefas.append(novas_tarefas)
-            print(tarefas)
+            print("Tarefa adicionada")
         case 2:
-            editar_tarefa = novas_tarefas
-            print(f"Edite: {editar_tarefa}")
-
+            if not (tarefas):
+                print("Nenhuma tarefa para editar.")
+            else:
+                for i in range(0, len(tarefas)):
+                    print(tarefas)
+                    indice = int(input("Digite o número da tarefa que deseja editar: ")) - 1
+                    if((0 <= indice)< len(tarefas)):
+                        nova_descricao = input("Digite a nova descrição da tarefa: ")
+                        tarefas[indice] = nova_descricao
+                        print("Tarefa editada com sucesso")
         case 3:
-            pass
+            print(tarefas)
+            remover_indice = int(input("Digite o indice para qual voce deseja remover: "))
+            if(remover_indice < len(tarefas)):
+                if confirmar.upper() == "S":
+                    removida = tarefas.pop(remover_indice)
+                    print(f"Tarefa '{removida}' removida com sucesso")
+            else:
+                print("Operação cancelada.")
         case 4:
+            print("Saindo")
             break
+        case _:
+            print("Opção invalida")
 
