@@ -17,15 +17,19 @@ while(True):
             else:
                 for i in range(0, len(tarefas)):
                     print(tarefas)
-                    indice = int(input("Digite o número da tarefa que deseja editar: ")) - 1
-                    if((0 <= indice)< len(tarefas)):
+                    indice = int(input("Digite o número da tarefa que deseja editar: ")) 
+                    if((0 <= indice) <= len(tarefas)):
                         nova_descricao = input("Digite a nova descrição da tarefa: ")
                         tarefas[indice] = nova_descricao
                         print("Tarefa editada com sucesso")
+                    else:
+                        print("Indice Invalido")
+                        
         case 3:
             print(tarefas)
             remover_indice = int(input("Digite o indice para qual voce deseja remover: "))
             if(remover_indice < len(tarefas)):
+                confirmar = input("Digite (S/N) para confirmar ")
                 if confirmar.upper() == "S":
                     removida = tarefas.pop(remover_indice)
                     print(f"Tarefa '{removida}' removida com sucesso")
@@ -36,4 +40,3 @@ while(True):
             break
         case _:
             print("Opção invalida")
-

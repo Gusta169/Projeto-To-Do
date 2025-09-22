@@ -4,4 +4,3 @@ def Mostrar_Menu():
     print("2 - Editar Tarefa")
     print("3 - Remover Tarefa")
     print("4 - Sair")
-    
